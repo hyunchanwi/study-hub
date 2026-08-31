@@ -75,8 +75,9 @@ const courses: Course[] = [
     title: '이산구조',
     english: 'Discrete Structures',
     track: '컴퓨터공학',
-    description: '논리와 증명, 집합, 조합론, 그래프를 예제 중심으로 공부합니다.',
-    status: 'planned',
+    description: '1주차 명제논리와 진리표부터 집합, 조합론, 그래프까지 예제 중심으로 공부합니다.',
+    status: 'live',
+    href: 'https://hyunchanwi.github.io/discrete-structures-study/',
     icon: Sigma,
     tone: 'violet',
   },
@@ -121,7 +122,7 @@ export default function Home() {
           >
             {liveCount} / {courses.length}
           </progress>
-          <p><Check aria-hidden="true" /> 현재 2개 과목에서 바로 공부할 수 있어요.</p>
+          <p><Check aria-hidden="true" /> 현재 {liveCount}개 과목에서 바로 공부할 수 있어요.</p>
         </aside>
       </section>
 
