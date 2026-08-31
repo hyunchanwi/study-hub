@@ -1,5 +1,5 @@
 import {
-  ArrowUpRight,
+  ArrowRight,
   BookOpen,
   BriefcaseBusiness,
   CalendarDays,
@@ -112,7 +112,15 @@ export default function Home() {
             <span>사이트 준비 현황</span>
             <strong>{liveCount} / {courses.length}</strong>
           </div>
-          <div className="progress-track" aria-hidden="true"><span style={{ width: `${(liveCount / courses.length) * 100}%` }} /></div>
+          <progress
+            className="progress-track"
+            aria-label="공개된 과목 사이트"
+            aria-valuetext={`${courses.length}개 중 ${liveCount}개 공개됨`}
+            max={courses.length}
+            value={liveCount}
+          >
+            {liveCount} / {courses.length}
+          </progress>
           <p><Check aria-hidden="true" /> 현재 2개 과목에서 바로 공부할 수 있어요.</p>
         </aside>
       </section>
@@ -132,8 +140,8 @@ export default function Home() {
         <div className="course-grid">
           {courses.map((course, index) => {
             const Icon = course.icon;
-            return (
-              <article className={`course-card tone-${course.tone} ${course.status === 'planned' ? 'is-planned' : ''}`} key={course.title}>
+            const cardContents = (
+              <>
                 <div className="card-head">
                   <span className="course-number">0{index + 1}</span>
                   <span className={`status status-${course.status}`}>
@@ -146,12 +154,27 @@ export default function Home() {
                 <p className="course-english">{course.english}</p>
                 <p className="course-description">{course.description}</p>
                 {course.status === 'live' && course.href ? (
-                  <a className="course-action" href={course.href} target="_blank" rel="noreferrer">
-                    공부하러 가기 <ArrowUpRight aria-hidden="true" />
-                  </a>
+                  <span className="course-action">
+                    공부하러 가기 <ArrowRight aria-hidden="true" />
+                  </span>
                 ) : (
-                  <span className="course-action disabled" aria-disabled="true">사이트 준비 중 <CircleDashed aria-hidden="true" /></span>
+                  <span className="course-action disabled">사이트 준비 중 <CircleDashed aria-hidden="true" /></span>
                 )}
+              </>
+            );
+
+            return course.status === 'live' && course.href ? (
+              <a
+                className={`course-card course-card-link tone-${course.tone}`}
+                href={course.href}
+                aria-label={`${course.title} 학습실로 이동`}
+                key={course.title}
+              >
+                {cardContents}
+              </a>
+            ) : (
+              <article className={`course-card tone-${course.tone} is-planned`} key={course.title}>
+                {cardContents}
               </article>
             );
           })}
