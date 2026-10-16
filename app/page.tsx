@@ -28,7 +28,7 @@ const courses: Course[] = [
     title: '금융시장론',
     english: 'Financial Markets',
     track: '경영',
-    description: '금융시장의 구조와 금리, 채권, 주식의 흐름을 한눈에 정리합니다.',
+    description: '1~4장 금융시장·금리·채권 흐름에 효율성, 콜·CD·RP와 재정증권·입찰 복습을 보강했습니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/financial-markets-study/',
     icon: Landmark,
@@ -38,7 +38,7 @@ const courses: Course[] = [
     title: '가치평가',
     english: 'Valuation',
     track: '경영',
-    description: '현금흐름, 자본비용과 기업가치 계산을 시험 흐름에 맞춰 정리합니다.',
+    description: '1~3장 세 접근법 비교와 현금흐름·YTM·EPS·WACC 계산의 혼동을 예제로 복습합니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/valuation-study/',
     icon: Sparkles,
@@ -48,7 +48,7 @@ const courses: Course[] = [
     title: '디지털경영',
     english: 'Digital Management',
     track: '경영',
-    description: '디지털 전환과 경영 전략을 강의 흐름과 핵심 질문으로 연결해 복습합니다.',
+    description: '1~7강 경영·조직·창업·전략·탄소중립을 GPT 학습 대화의 개념·사례·복습 문제로 공부합니다. 8~15주차는 자료 대기입니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/digital-management-study/',
     icon: BriefcaseBusiness,
@@ -58,7 +58,7 @@ const courses: Course[] = [
     title: '객체지향프로그래밍2',
     english: 'Object-Oriented Programming 2',
     track: '컴퓨터공학',
-    description: 'C++ 클래스, 생성자, 배열과 포인터를 코드와 문제로 복습합니다.',
+    description: '3~5주차 클래스·포인터 복습에 6주차 상속·Lab6와 7주차 다형성·Lab7을 연결했습니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/oop2-study/',
     icon: Code2,
@@ -68,7 +68,7 @@ const courses: Course[] = [
     title: '논리회로',
     english: 'Logic Circuits',
     track: '컴퓨터공학',
-    description: '진리표부터 조합·순차 회로와 Verilog까지 차근차근 쌓아갑니다.',
+    description: '4장 극성·카르노맵을 보강하고 6주차 산술회로와 7주차 9장 1~15쪽 학습을 연결했습니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/logic-circuits-study/',
     icon: Network,
@@ -78,7 +78,7 @@ const courses: Course[] = [
     title: '이산구조',
     english: 'Discrete Structures',
     track: '컴퓨터공학',
-    description: '1주차 명제논리와 진리표부터 집합, 조합론, 그래프까지 예제 중심으로 공부합니다.',
+    description: '1~5주차 논리·증명·집합·함수와 기호사전, 7주차 Lec9 기수·가산성·행렬 추가 학습을 연결했습니다. 6주차는 자료 대기입니다.',
     status: 'live',
     href: 'https://hyunchanwi.github.io/discrete-structures-study/',
     icon: Sigma,
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <p>배운 만큼 채워지는 나만의 학습 지도</p>
+        <p>배운 만큼 채워지는 나만의 학습 지도 · 2026-10-16 학습 정리 갱신</p>
         <span>Semester Hub · Inha University</span>
       </footer>
     </main>
